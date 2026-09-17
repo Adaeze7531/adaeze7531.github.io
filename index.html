@@ -6,13 +6,20 @@
 
   <title>Adaeze Obi | Virtual Assistant</title>
 
-  <meta name="description" content="Adaeze Obi is a Virtual Assistant specializing in operations, administrative support, customer support, and workflow organization.">
+  <meta name="description" content="Adaeze Obi - Virtual Assistant specializing in administrative support, operations, customer support, documentation and workflow organization.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -20,97 +27,117 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f8f5f0;
-      color: #3f332d;
+      font-family: "DM Sans", sans-serif;
+      background: #faf7f3;
+      color: #3c302a;
       line-height: 1.7;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     .container {
       width: 90%;
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
     }
 
-    /* Navigation */
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
-      background: #f8f5f0;
-      border-bottom: 1px solid #e6ddd4;
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: rgba(250, 247, 243, 0.96);
+      border-bottom: 1px solid #e8ded5;
     }
 
     .nav-container {
-      max-width: 1100px;
+      max-width: 1150px;
       width: 90%;
       margin: auto;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       padding: 20px 0;
     }
 
     .logo {
-      font-size: 21px;
-      font-weight: bold;
-      color: #3f332d;
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      font-weight: 600;
+      color: #3b2d26;
     }
 
     .nav-links {
-      display: flex;
-      gap: 28px;
       list-style: none;
+      display: flex;
+      gap: 30px;
     }
 
     .nav-links a {
       font-size: 14px;
+      font-weight: 500;
       color: #665850;
+      transition: 0.3s;
     }
 
     .nav-links a:hover {
-      color: #8a6653;
+      color: #9a7059;
     }
 
-    /* Hero */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      padding: 110px 0 100px;
+      padding: 95px 0 105px;
     }
 
-    .hero-content {
-      max-width: 780px;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 70px;
+      align-items: center;
     }
 
     .eyebrow {
-      color: #9a735c;
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
       text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #9a7059;
       margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: 58px;
+      font-family: "Playfair Display", serif;
+      font-size: 60px;
       line-height: 1.1;
+      color: #342721;
       margin-bottom: 25px;
-      color: #332923;
     }
 
     .hero h1 span {
-      color: #8a6653;
+      color: #9a7059;
     }
 
-    .hero p {
-      font-size: 19px;
-      max-width: 680px;
+    .hero-description {
+      font-size: 18px;
+      max-width: 650px;
       color: #665850;
       margin-bottom: 32px;
     }
@@ -122,87 +149,171 @@
     }
 
     .button {
-      display: inline-block;
       padding: 13px 23px;
-      border-radius: 6px;
-      font-weight: bold;
+      border-radius: 7px;
       font-size: 14px;
-      border: 1px solid #8a6653;
+      font-weight: 700;
+      transition: 0.3s;
     }
 
     .button-primary {
-      background: #8a6653;
+      background: #8f6954;
       color: white;
     }
 
+    .button-primary:hover {
+      background: #765342;
+      transform: translateY(-2px);
+    }
+
     .button-secondary {
-      color: #8a6653;
+      border: 1px solid #b99d8b;
+      color: #765342;
       background: transparent;
     }
 
-    /* Sections */
+    .button-secondary:hover {
+      background: #eee5dd;
+    }
+
+    .hero-photo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo img {
+      width: 350px;
+      height: 430px;
+      object-fit: cover;
+      border-radius: 180px 180px 20px 20px;
+      border: 8px solid #eee5dd;
+      box-shadow: 0 20px 50px rgba(75, 55, 43, 0.12);
+    }
+
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     section {
-      padding: 85px 0;
+      padding: 90px 0;
+    }
+
+    .section-label {
+      color: #9a7059;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
     .section-title {
-      font-size: 34px;
-      color: #332923;
+      font-family: "Playfair Display", serif;
+      font-size: 40px;
+      color: #342721;
       margin-bottom: 15px;
     }
 
     .section-intro {
-      max-width: 680px;
-      color: #6d5d54;
+      max-width: 700px;
+      color: #6c5c53;
       margin-bottom: 45px;
     }
 
-    /* About */
+
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
-      background: #eee7df;
+      background: #eee6de;
     }
 
-    .about-text {
-      max-width: 780px;
-      font-size: 17px;
-      color: #55473f;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .about-highlight {
+      background: #faf7f3;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #e4d9cf;
+    }
+
+    .about-highlight h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .about-highlight p {
+      color: #6c5c53;
+      font-size: 15px;
     }
 
     .about-text p {
       margin-bottom: 18px;
+      color: #584941;
     }
 
-    /* Services */
+
+    /* =========================
+       SERVICES
+    ========================= */
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
     .service-card {
       background: white;
-      border: 1px solid #e6ddd4;
       padding: 30px;
-      border-radius: 8px;
+      border: 1px solid #e5dcd4;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(72, 51, 40, 0.08);
+    }
+
+    .service-icon {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eee5dd;
+      border-radius: 9px;
+      margin-bottom: 20px;
+      font-size: 20px;
     }
 
     .service-card h3 {
+      font-size: 19px;
       margin-bottom: 10px;
-      color: #44362f;
+      color: #43352e;
     }
 
     .service-card p {
-      color: #6d5d54;
-      font-size: 15px;
+      font-size: 14px;
+      color: #6c5c53;
     }
 
-    /* Portfolio */
+
+    /* =========================
+       PORTFOLIO
+    ========================= */
 
     .portfolio {
-      background: #eee7df;
+      background: #eee6de;
     }
 
     .project-grid {
@@ -212,97 +323,233 @@
     }
 
     .project-card {
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      border: 1px solid #e2d8cf;
+      background: #faf7f3;
+      border: 1px solid #e1d6cc;
+      border-radius: 10px;
+      padding: 32px;
+
       display: flex;
       flex-direction: column;
     }
 
     .project-number {
-      font-size: 13px;
-      color: #9a735c;
-      font-weight: bold;
-      margin-bottom: 10px;
+      color: #9a7059;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
     }
 
     .project-card h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-      color: #3d3029;
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      line-height: 1.3;
+      margin-bottom: 13px;
+      color: #3d2f28;
     }
 
     .project-card p {
-      color: #6d5d54;
+      color: #6c5c53;
       font-size: 15px;
-      margin-bottom: 22px;
+      margin-bottom: 25px;
       flex-grow: 1;
     }
 
     .project-link {
-      color: #8a6653;
-      font-weight: bold;
+      color: #8f6954;
       font-size: 14px;
+      font-weight: 700;
     }
 
-    /* Skills */
+    .project-link:hover {
+      text-decoration: underline;
+    }
 
-    .skills-list {
+
+    /* =========================
+       TOOLS
+    ========================= */
+
+    .tools-intro {
+      margin-bottom: 40px;
+    }
+
+    .tool-category {
+      margin-bottom: 40px;
+    }
+
+    .tool-category h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      margin-bottom: 20px;
+      color: #44352d;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .tool-card {
+      background: white;
+      border: 1px solid #e5dcd4;
+      border-radius: 10px;
+      padding: 22px 15px;
+
+      text-align: center;
+
+      transition: 0.3s;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(70, 50, 40, 0.08);
+    }
+
+    .tool-logo {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 12px;
+
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 25px;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 12px;
+      background: #f0e9e3;
+
+      font-size: 20px;
+      font-weight: 700;
+      color: #765342;
     }
 
-    .skill {
-      background: #eee7df;
-      padding: 10px 16px;
-      border-radius: 20px;
+    .tool-card h4 {
       font-size: 14px;
-      color: #55473f;
+      color: #45362e;
     }
 
-    /* Contact */
+    .tool-card p {
+      font-size: 12px;
+      color: #7a6960;
+      margin-top: 4px;
+    }
+
+
+    /* =========================
+       CERTIFICATIONS
+    ========================= */
+
+    .certifications {
+      background: #eee6de;
+    }
+
+    .certification-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .certification-card {
+      background: #faf7f3;
+      border: 1px solid #e1d6cc;
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    .certification-type {
+      font-size: 11px;
+      color: #9a7059;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    .certification-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      margin-bottom: 7px;
+      color: #40322b;
+    }
+
+    .certification-provider {
+      font-size: 14px;
+      font-weight: 600;
+      color: #765342;
+      margin-bottom: 10px;
+    }
+
+    .certification-card p {
+      font-size: 14px;
+      color: #6c5c53;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
-      text-align: center;
-      background: #3f332d;
+      background: #3e3029;
       color: white;
+      text-align: center;
+    }
+
+    .contact .section-label {
+      color: #c9a994;
     }
 
     .contact .section-title {
       color: white;
     }
 
-    .contact .section-intro {
-      color: #ddd1c8;
-      margin-left: auto;
-      margin-right: auto;
+    .contact-text {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #ddd0c8;
     }
 
-    .contact-button {
-      display: inline-block;
-      background: white;
-      color: #3f332d;
-      padding: 13px 25px;
-      border-radius: 6px;
-      font-weight: bold;
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
-    /* Footer */
+    .contact-link {
+      background: #faf7f3;
+      color: #493a32;
+      padding: 12px 20px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .contact-link:hover {
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      background: #332923;
-      color: #cfc1b7;
+      background: #30241f;
+      color: #cbbdb4;
       text-align: center;
-      padding: 22px;
+      padding: 25px;
       font-size: 13px;
     }
 
-    /* Mobile */
 
-    @media (max-width: 750px) {
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
 
       .nav-container {
         flex-direction: column;
@@ -315,96 +562,215 @@
         justify-content: center;
       }
 
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
       .hero {
-        padding: 75px 0;
+        padding: 70px 0;
       }
 
       .hero h1 {
-        font-size: 42px;
+        font-size: 45px;
       }
 
-      .hero p {
-        font-size: 17px;
+      .hero-photo {
+        order: -1;
+      }
+
+      .hero-photo img {
+        width: 280px;
+        height: 350px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 33px;
       }
 
       .services-grid,
-      .project-grid {
+      .project-grid,
+      .certification-grid {
         grid-template-columns: 1fr;
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       section {
         padding: 65px 0;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- Navigation -->
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
   <nav>
+
     <div class="nav-container">
-      <a href="#" class="logo">Adaeze Obi</a>
+
+      <a href="#" class="logo">
+        Adaeze Obi
+      </a>
 
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#services">Services</a>
+        </li>
+
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+
+        <li>
+          <a href="#tools">Tools</a>
+        </li>
+
+        <li>
+          <a href="#training">Training</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
       </ul>
+
     </div>
+
   </nav>
 
 
-  <!-- Hero -->
+
+  <!-- =========================
+       HERO
+  ========================= -->
 
   <header class="hero">
-    <div class="container hero-content">
 
-      <div class="eyebrow">
-        Virtual Assistant • Operations • Administrative Support
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          Virtual Assistant • Operations • Administrative Support
+        </div>
+
+        <h1>
+          Bringing structure to
+          <span>everyday work.</span>
+        </h1>
+
+        <p class="hero-description">
+          I'm Adaeze Obi, a Virtual Assistant supporting businesses and teams
+          with administrative tasks, operations, customer communication,
+          documentation, and workflow organization.
+        </p>
+
+        <div class="buttons">
+
+          <a href="#portfolio" class="button button-primary">
+            View My Work
+          </a>
+
+          <a href="#contact" class="button button-secondary">
+            Let's Work Together
+          </a>
+
+        </div>
+
       </div>
 
-      <h1>
-        Helping businesses stay organized, supported, and moving forward.
-      </h1>
 
-      <p>
-        I'm Adaeze Obi, a Virtual Assistant specializing in administrative
-        support, operations, customer communication, documentation, and
-        workflow organization.
-      </p>
+      <div class="hero-photo">
 
-      <div class="buttons">
-        <a href="#portfolio" class="button button-primary">
-          View My Work
-        </a>
+        <!-- YOUR PHOTO -->
+        <img
+          src="profile-photo.jpg"
+          alt="Adaeze Obi"
+        >
 
-        <a href="#contact" class="button button-secondary">
-          Get in Touch
-        </a>
       </div>
 
     </div>
+
   </header>
 
 
-  <!-- About -->
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
 
   <section class="about" id="about">
 
-    <div class="container">
+    <div class="container about-grid">
 
-      <h2 class="section-title">About Me</h2>
+      <div class="about-highlight">
+
+        <div class="section-label">
+          About Me
+        </div>
+
+        <h3>
+          Practical support that keeps work moving.
+        </h3>
+
+        <p>
+          I enjoy bringing structure to administrative work, organizing
+          information, and helping teams stay on top of their day-to-day
+          responsibilities.
+        </p>
+
+      </div>
+
 
       <div class="about-text">
 
+        <h2 class="section-title">
+          A little about me
+        </h2>
+
         <p>
-          I provide reliable administrative and operational support that helps
-          teams keep information organized, communication clear, and everyday
-          tasks moving.
+          I provide administrative and operational support that helps teams
+          keep communication clear, information organized, and everyday tasks
+          moving.
         </p>
 
         <p>
@@ -415,9 +781,9 @@
         </p>
 
         <p>
-          I enjoy bringing structure to work that can easily become scattered,
-          while making sure the people I support have the information and
-          follow-up they need.
+          I work comfortably with structured processes while also adapting
+          when priorities change. My goal is to make the work I support easier
+          to manage and easier to follow.
         </p>
 
       </div>
@@ -427,52 +793,139 @@
   </section>
 
 
-  <!-- Services -->
+
+  <!-- =========================
+       SERVICES
+  ========================= -->
 
   <section id="services">
 
     <div class="container">
 
-      <h2 class="section-title">How I Can Help</h2>
+      <div class="section-label">
+        What I Do
+      </div>
+
+      <h2 class="section-title">
+        How I can support your team
+      </h2>
 
       <p class="section-intro">
-        Administrative and operational support designed to make everyday work
-        more organized and manageable.
+        Administrative and operational support focused on keeping information,
+        communication, and processes organized.
       </p>
+
 
       <div class="services-grid">
 
-        <div class="service-card">
-          <h3>Administrative Support</h3>
-          <p>
-            Email organization, documentation, file management, forms,
-            follow-ups, and day-to-day administrative tasks.
-          </p>
-        </div>
 
         <div class="service-card">
-          <h3>Operations Support</h3>
+
+          <div class="service-icon">
+            ✦
+          </div>
+
+          <h3>
+            Administrative Support
+          </h3>
+
+          <p>
+            Support with documentation, forms, records, email organization,
+            follow-ups, and everyday administrative tasks.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            ◇
+          </div>
+
+          <h3>
+            Operations Support
+          </h3>
+
           <p>
             Workflow organization, process documentation, task coordination,
             onboarding support, and maintaining organized information.
           </p>
+
         </div>
 
+
         <div class="service-card">
-          <h3>Email & Customer Support</h3>
+
+          <div class="service-icon">
+            @
+          </div>
+
+          <h3>
+            Email & Customer Support
+          </h3>
+
           <p>
-            Professional email communication, inbox organization, customer
+            Inbox organization, professional communication, customer
             inquiries, request handling, and follow-up.
           </p>
+
         </div>
 
+
         <div class="service-card">
-          <h3>Document & Drive Organization</h3>
+
+          <div class="service-icon">
+            □
+          </div>
+
+          <h3>
+            Document & Drive Organization
+          </h3>
+
           <p>
-            Organizing digital files, maintaining folder structures, managing
-            access, and making information easier to find.
+            Organizing digital files, maintaining folder structures,
+            coordinating access, and making information easier to find.
           </p>
+
         </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            ✓
+          </div>
+
+          <h3>
+            Recruitment & Onboarding Support
+          </h3>
+
+          <p>
+            Application tracking, interview coordination, onboarding
+            documentation, communication, and process support.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            +
+          </div>
+
+          <h3>
+            Workflow Documentation
+          </h3>
+
+          <p>
+            Creating practical checklists, workflows, process guides, and
+            documentation that make recurring tasks easier to manage.
+          </p>
+
+        </div>
+
 
       </div>
 
@@ -481,35 +934,48 @@
   </section>
 
 
-  <!-- Portfolio -->
+
+  <!-- =========================
+       PORTFOLIO
+  ========================= -->
 
   <section class="portfolio" id="portfolio">
 
     <div class="container">
 
-      <h2 class="section-title">Selected Work</h2>
+      <div class="section-label">
+        Portfolio
+      </div>
+
+      <h2 class="section-title">
+        Selected Work
+      </h2>
 
       <p class="section-intro">
-        A selection of practical projects demonstrating how I approach
-        administrative, operational, and coordination tasks.
+        Practical projects demonstrating how I approach administrative,
+        operational, coordination, and support tasks.
       </p>
+
 
       <div class="project-grid">
 
-        <!-- Project 1 -->
+
+        <!-- PROJECT 1 -->
 
         <div class="project-card">
 
-          <div class="project-number">PROJECT 01</div>
+          <div class="project-number">
+            PROJECT 01
+          </div>
 
           <h3>
             Volunteer Recruitment & Onboarding Workflow
           </h3>
 
           <p>
-            A structured workflow covering volunteer recruitment,
-            application tracking, interview coordination, selection handoff,
-            and onboarding activities.
+            A structured workflow covering volunteer recruitment, application
+            tracking, interview coordination, selection handoff, and
+            onboarding activities.
           </p>
 
           <a
@@ -517,17 +983,19 @@
             target="_blank"
             class="project-link"
           >
-            View Project →
+            View Case Study →
           </a>
 
         </div>
 
 
-        <!-- Project 2 -->
+        <!-- PROJECT 2 -->
 
         <div class="project-card">
 
-          <div class="project-number">PROJECT 02</div>
+          <div class="project-number">
+            PROJECT 02
+          </div>
 
           <h3>
             Volunteer Event Coordination
@@ -544,26 +1012,28 @@
             target="_blank"
             class="project-link"
           >
-            View Project →
+            View Case Study →
           </a>
 
         </div>
 
 
-        <!-- Project 3 -->
+        <!-- PROJECT 3 -->
 
         <div class="project-card">
 
-          <div class="project-number">PROJECT 03</div>
+          <div class="project-number">
+            PROJECT 03
+          </div>
 
           <h3>
             Administrative Operations & Document Management
           </h3>
 
           <p>
-            A practical administrative workflow covering document
-            organization, Google Drive management, access coordination,
-            onboarding support, and internal information management.
+            A practical administrative workflow covering document organization,
+            Google Drive management, access coordination, onboarding support,
+            and internal information management.
           </p>
 
           <a
@@ -571,17 +1041,19 @@
             target="_blank"
             class="project-link"
           >
-            View Project →
+            View Case Study →
           </a>
 
         </div>
 
 
-        <!-- Project 4 -->
+        <!-- PROJECT 4 -->
 
         <div class="project-card">
 
-          <div class="project-number">PROJECT 04</div>
+          <div class="project-number">
+            PROJECT 04
+          </div>
 
           <h3>
             Email, Calendar & Customer Support Management
@@ -598,8 +1070,238 @@
             target="_blank"
             class="project-link"
           >
-            View Project →
+            View Case Study →
           </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       TOOLS
+  ========================= -->
+
+  <section id="tools">
+
+    <div class="container">
+
+      <div class="section-label">
+        Tools & Platforms
+      </div>
+
+      <h2 class="section-title">
+        Tools I work with
+      </h2>
+
+      <p class="section-intro">
+        A selection of tools I've used through administrative support,
+        project work, customer support, training, and practical exercises.
+      </p>
+
+
+      <!-- GOOGLE WORKSPACE -->
+
+      <div class="tool-category">
+
+        <h3>
+          Google Workspace
+        </h3>
+
+        <div class="tools-grid">
+
+
+          <div class="tool-card">
+
+            <div class="tool-logo">
+              G
+            </div>
+
+            <h4>
+              Gmail
+            </h4>
+
+            <p>
+              Email Management
+            </p>
+
+          </div>
+
+
+          <div class="tool-card">
+
+            <div class="tool-logo">
+              D
+            </div>
+
+            <h4>
+              Google Drive
+            </h4>
+
+            <p>
+              File Organization
+            </p>
+
+          </div>
+
+
+          <div class="tool-card">
+
+            <div class="tool-logo">
+              C
+            </div>
+
+            <h4>
+              Google Calendar
+            </h4>
+
+            <p>
+              Scheduling
+            </p>
+
+          </div>
+
+
+          <div class="tool-card">
+
+            <div class="tool-logo">
+              S
+            </div>
+
+            <h4>
+              Google Sheets
+            </h4>
+
+            <p>
+              Tracking & Records
+            </p>
+
+          </div>
+
+
+          <div class="tool-card">
+
+            <div class="tool-logo">
+              F
+            </div>
+
+            <h4>
+              Google Forms
+            </h4>
+
+            <p>
+              Forms & Data Collection
+            </p>
+
+          </div>
+
+
+          <div class="tool-card">
+
+            <div class="tool-logo">
+              D
+            </div>
+
+            <h4>
+              Google Docs
+            </h4>
+
+            <p>
+              Documentation
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT & WORKFLOW TOOLS -->
+
+      <div class="tool-category">
+
+        <h3>
+          Project & Workflow
+        </h3>
+
+        <div class="tools-grid">
+
+
+          <div class="tool-card">
+
+            <div class="tool-logo">
+              T
+            </div>
+
+            <h4>
+              Trello
+            </h4>
+
+            <p>
+              Task Coordination
+            </p>
+
+          </div>
+
+
+          <div class="tool-card">
+
+            <div class="tool-logo">
+              M
+            </div>
+
+            <h4>
+              Miro
+            </h4>
+
+            <p>
+              Collaboration
+            </p>
+
+          </div>
+
+
+          <div class="tool-card">
+
+            <div class="tool-logo">
+              H
+            </div>
+
+            <h4>
+              HubSpot
+            </h4>
+
+            <p>
+              CRM & Leads
+            </p>
+
+          </div>
+
+
+          <div class="tool-card">
+
+            <div class="tool-logo">
+              B
+            </div>
+
+            <h4>
+              Buffer
+            </h4>
+
+            <p>
+              Social Scheduling
+            </p>
+
+          </div>
+
 
         </div>
 
@@ -610,35 +1312,154 @@
   </section>
 
 
-  <!-- Skills -->
 
-  <section id="skills">
+  <!-- =========================
+       TRAINING
+  ========================= -->
+
+  <section class="certifications" id="training">
 
     <div class="container">
 
-      <h2 class="section-title">Skills & Tools</h2>
+      <div class="section-label">
+        Training & Certifications
+      </div>
+
+      <h2 class="section-title">
+        Learning that supports my work
+      </h2>
 
       <p class="section-intro">
-        Tools and skills I use to support administrative and operational work.
+        Training and practical learning that have helped me develop skills
+        across virtual assistance, administration, project management,
+        customer support, and digital business support.
       </p>
 
-      <div class="skills-list">
 
-        <span class="skill">Administrative Support</span>
-        <span class="skill">Operations Support</span>
-        <span class="skill">Email Management</span>
-        <span class="skill">Customer Support</span>
-        <span class="skill">Google Workspace</span>
-        <span class="skill">Google Drive</span>
-        <span class="skill">Google Docs</span>
-        <span class="skill">Google Sheets</span>
-        <span class="skill">Google Forms</span>
-        <span class="skill">Google Calendar</span>
-        <span class="skill">Process Documentation</span>
-        <span class="skill">Workflow Organization</span>
-        <span class="skill">Recruitment Coordination</span>
-        <span class="skill">Onboarding Support</span>
-        <span class="skill">Follow-Up Management</span>
+      <div class="certification-grid">
+
+
+        <!-- AFRIMENT -->
+
+        <div class="certification-card">
+
+          <div class="certification-type">
+            Virtual Assistant Training
+          </div>
+
+          <h3>
+            Virtual Assistant Training
+          </h3>
+
+          <div class="certification-provider">
+            Afriment
+          </div>
+
+          <p>
+            Practical training covering virtual assistant responsibilities,
+            customer service, email newsletters, and related support tasks.
+          </p>
+
+        </div>
+
+
+        <!-- AFFLUENCE -->
+
+        <div class="certification-card">
+
+          <div class="certification-type">
+            Virtual Assistant Training
+          </div>
+
+          <h3>
+            Virtual Assistant Training
+          </h3>
+
+          <div class="certification-provider">
+            Affluence Academy
+          </div>
+
+          <p>
+            Training covering VA documentation, CRM, administrative work,
+            scheduling, social media support, and related virtual assistant
+            responsibilities.
+          </p>
+
+        </div>
+
+
+        <!-- EXCELERATE -->
+
+        <div class="certification-card">
+
+          <div class="certification-type">
+            Project Management
+          </div>
+
+          <h3>
+            Project Management
+          </h3>
+
+          <div class="certification-provider">
+            Excelerate
+          </div>
+
+          <p>
+            Training and practical experience covering project management,
+            Agile concepts, sprints, and managing project activities.
+          </p>
+
+        </div>
+
+
+        <!-- GAOTEK -->
+
+        <div class="certification-card">
+
+          <div class="certification-type">
+            Internship
+          </div>
+
+          <h3>
+            Lead Generation & Email Marketing
+          </h3>
+
+          <div class="certification-provider">
+            GAO Tek · 2025
+          </div>
+
+          <p>
+            Internship experience focused on lead generation and email
+            marketing, including prospect research and outreach support.
+          </p>
+
+        </div>
+
+
+        <!-- SOCIAL MEDIA -->
+
+        <div class="certification-card">
+
+          <div class="certification-type">
+            Digital Marketing Training
+          </div>
+
+          <h3>
+            Social Media Management
+          </h3>
+
+          <div class="certification-provider">
+            Training · 2025
+          </div>
+
+          <p>
+            Training covering social media management, advertising,
+            scheduling posts with Buffer, and understanding social media
+            operations.
+          </p>
+
+        </div>
+
 
       </div>
 
@@ -647,36 +1468,85 @@
   </section>
 
 
-  <!-- Contact -->
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
 
   <section class="contact" id="contact">
 
     <div class="container">
 
-      <h2 class="section-title">Let's Work Together</h2>
+      <div class="section-label">
+        Contact
+      </div>
 
-      <p class="section-intro">
-        If you need reliable administrative or operational support,
-        I'd be happy to discuss how I can support your team.
+      <h2 class="section-title">
+        Let's work together
+      </h2>
+
+      <p class="contact-text">
+        If you need reliable administrative or operational support, I'd be
+        happy to discuss how I can support your team.
       </p>
 
-      <a
-        href="mailto:YOUR-EMAIL@example.com"
-        class="contact-button"
-      >
-        Contact Me
-      </a>
+
+      <div class="contact-links">
+
+
+        <a
+          href="mailto:adaezeobi.va@gmail.com"
+          class="contact-link"
+        >
+          Email Me
+        </a>
+
+
+        <a
+          href="https://www.linkedin.com/in/adaezeobijoy"
+          target="_blank"
+          class="contact-link"
+        >
+          LinkedIn
+        </a>
+
+
+        <a
+          href="https://www.upwork.com/freelancers/~01510145c12041b206"
+          target="_blank"
+          class="contact-link"
+        >
+          Upwork
+        </a>
+
+
+        <a
+          href="https://github.com/Adaeze7531"
+          target="_blank"
+          class="contact-link"
+        >
+          GitHub
+        </a>
+
+
+      </div>
 
     </div>
 
   </section>
 
 
-  <!-- Footer -->
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
-    © 2026 Adaeze Obi. All rights reserved.
+
+    © 2026 Adaeze Obi · Virtual Assistant | Operations & Administrative Support
+
   </footer>
+
 
 </body>
 </html>
